@@ -1,0 +1,18 @@
+.headerContainer{
+    height: 15vh;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1c88fa;
+    margin:0%;
+    position:relative;
+    top:0;
+    left: 0;
+}
+.logo{
+height: 80%;
+width: auto;
+background-color: #1c88fa;
+}

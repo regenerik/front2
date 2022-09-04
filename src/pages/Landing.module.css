@@ -1,0 +1,116 @@
+.bd{
+   margin:0;
+   color:rgb(33, 33, 33);
+   background-color: #ededed;
+   font-family: 'Roboto Slab', serif;
+   font-size: 1em; 
+}
+
+.ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+h1{
+    margin:0;
+}
+
+.container> *{
+    padding:20px;
+
+}
+
+/* -------------Organizando las denominaciones grid------------ */
+
+
+.header{
+    grid-area: header;
+    height: 100%;
+    background-color: #1c88fa;
+    box-shadow: 0px 2px 2px;
+}
+
+.content{
+    grid-area: content;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.side{
+    grid-area: side;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #1c88fa;
+    box-shadow: 0px -2px 2px ;
+}
+
+/* -----distrubución grid----- */
+
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "content"
+    "side"
+    "footer"
+    ;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* -----media querys----- */
+
+@media (min-width:500px){
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "side content"
+        "footer footer"
+        ;
+    }
+
+}
+
+@media (min-width: 770px){
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .container {
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+        "header header header"
+        "navbar content side"
+        "navbar content side"
+        "footer footer footer"
+        ;
+    }
+}
