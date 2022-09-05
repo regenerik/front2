@@ -7,8 +7,9 @@ const Sidebar = () => {
     <div className={style.sideBarContainer}>
       <p className={style.frase}>Acá corroboraría mis dólares.
         Si tuviera dólares...
-      <img className={style.elTipo} src={tipo} alt="hombre"/>
       </p>
+      <img className={style.elTipo} src={tipo} alt="hombre"/>
+      
     </div>
   )
 }
